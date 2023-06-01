@@ -9,8 +9,7 @@ Team:
 
 ## Shoes microservice
 
-Explain your models and integration with the wardrobe
-microservice, here.
+Testing
 
 ## Hats microservice
 

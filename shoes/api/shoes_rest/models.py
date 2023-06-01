@@ -21,3 +21,4 @@ class shoe(models.Model):
         return self.name
 
 # make the bin VO
+# the 
