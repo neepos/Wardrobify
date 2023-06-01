@@ -2,7 +2,7 @@
 
 Team:
 
-* Person 1 - Which microservice?
+* Tom Chong - Hats
 * Mac Stephens - Shoes
 
 ## Design
