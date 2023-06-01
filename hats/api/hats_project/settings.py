@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "hats_api.apps.HatsAppConfig",
     "corsheaders",
     'django.contrib.admin',
     'django.contrib.auth',
