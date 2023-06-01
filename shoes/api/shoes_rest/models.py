@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class shoe(models.Model):
+class Shoe(models.Model):
     manufacturer = models.CharField(max_length=200)
     model_name = models.CharField(max_length=150)
     color = models.Charfield(max_length=150)
