@@ -9,7 +9,7 @@ import json
 # bin vo encoder handles the properties from the BinVO model
 class BinVOEncoder(ModelEncoder):
     model = BinVO
-    properties = ["import_href", "closet_name", "bin_number"]
+    properties = ["import_href", "closet_name", "bin_number", "bin_size"]
 
 
 # make detail encoder for json
