@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import React from 'react'
 import MainPage from './MainPage'
 import ShoeList from './ShoeList'
+import ShoeForm from './ShoeForm'
 import Nav from './Nav'
 
 
@@ -16,6 +17,7 @@ function App(props) {
         <Routes>
           <Route path="/" element={<MainPage />} />  
           <Route path="shoes" element={<ShoeList shoes={props.shoes} />} />
+          <Route path="shoes/new" element={<ShoeForm />} />
         </Routes>
       </div>
     </BrowserRouter>

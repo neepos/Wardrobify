@@ -3,7 +3,7 @@ import "./index.css"
 
 function ShoeList(props) {
     return (
-        <table className="table table-striped">
+        <table className="table table-shadow table-striped" >
             <thead>
                 
                 <tr>
@@ -20,7 +20,7 @@ function ShoeList(props) {
                             <td>{shoe.manufacturer}</td>
                             <td>{shoe.model_name}</td>
                             <td>{shoe.color}</td>
-                            <td>{shoe.picture_url}</td>
+                            <td><img src={shoe.picture_url} alt="" width="50%" height="50%" /></td>
                         </tr>
                     )
                 })}
