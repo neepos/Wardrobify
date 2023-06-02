@@ -70,7 +70,7 @@ def api_list_shoes(request, bin_vo_id=None):
 
 # create a shoe detail function that GETs details
 
-@require_http_methods(["GET", "DELETE"])
+@require_http_methods(["GET", "DELETE", "PUT"])
 def api_shoe_detail(request, id):
     if request.method == "GET":
         try:
