@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 
 function ShoeForm() {
     const [manufacturer, setManufacturer] = useState('')
@@ -33,7 +33,7 @@ function ShoeForm() {
         setBin(value)
     }
 
-    
+
     const fetchData = async () => {
         const Url = 'http://localhost:8100/api/bins/'
 
@@ -43,7 +43,7 @@ function ShoeForm() {
             setBins(data.bins)
         }
     }
-    
+
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -78,7 +78,7 @@ function ShoeForm() {
             setBin('')
         }
     }
-    
+
     useEffect(() => {
         fetchData()
     }, [])
@@ -88,7 +88,7 @@ function ShoeForm() {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
-                    <h1>Create a new shoe</h1>
+                    <h1>Add Shoes to Your Wardrobe!</h1>
                     <form onSubmit={handleSubmit} id="create-bin-form">
                         <div className="form-floating mb-3">
                             <input onChange={handleManufacturerChange} value={manufacturer} placeholder="Manufacturer" required type="text" name="manufacturer" id="manufacturer" className="form-control" />
@@ -118,9 +118,9 @@ function ShoeForm() {
                                 })}
                             </select>
                         </div>
-                        <button className="btn btn-primary">Create</button>
+                        <button className="btn btn-primary">Add!</button>
                     </form>
-                </div>    
+                </div>
             </div>
         </div>
 

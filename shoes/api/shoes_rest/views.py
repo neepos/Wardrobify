@@ -57,9 +57,12 @@ def api_list_shoes(request, bin_vo_id=None):
     # implement the POST portion of the function
     else:
         content = json.loads(request.body)
+
+    try:
         import_href = f"/api/bins/{content['bin']}/"
         bin = BinVO.objects.get(import_href=import_href)
         content["bin"] = bin
+    except BinVO.DoesNotExist:
         shoes = Shoe.objects.create(**content)
         return JsonResponse(
             shoes,
@@ -70,16 +73,17 @@ def api_list_shoes(request, bin_vo_id=None):
 
 # create a shoe detail function that GETs details
 
+
 @require_http_methods(["GET", "DELETE", "PUT"])
 def api_shoe_detail(request, id):
     if request.method == "GET":
         try:
             shoe = Shoe.objects.get(id=id)
             return JsonResponse(
-                    shoe,
-                    encoder=ShoeDetailEncoder,
-                    safe=False,
-                )
+                shoe,
+                encoder=ShoeDetailEncoder,
+                safe=False,
+            )
         except Shoe.DoesNotExist:
             return JsonResponse(
                 {"message": "no id exists"},

@@ -8,6 +8,9 @@ function MainPage() {
           the solution for you!
         </p>
       </div>
+      <div>
+        <img src="https://tinyurl.com/yckpe8e7" className="img-fluid rounded mx-auto d-block"></img>
+      </div>
     </div>
   );
 }

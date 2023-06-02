@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React from 'react'
 import MainPage from './MainPage'
 import ShoeList from './ShoeList'
@@ -15,7 +15,7 @@ function App(props) {
       <Nav />
       <div className="container">
         <Routes>
-          <Route path="/" element={<MainPage />} />  
+          <Route path="/" element={<MainPage />} />
           <Route path="shoes" element={<ShoeList shoes={props.shoes} />} />
           <Route path="shoes/new" element={<ShoeForm />} />
         </Routes>
